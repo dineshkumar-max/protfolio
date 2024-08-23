@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="front-end-developer.webp" type="image/x-icon">
+    <title> My Protfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            
+            font-style: Helvetica;
+            margin: 0;
+            padding: 0;
+            background-color: light-grey;
+            color: #333;
+             background-image: url(''); /* Replace with your image path */
+            background-size: cover; /* Ensure the image covers the entire page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Keep the image fixed during scrolling */
+            background-repeat: no-repeat;
+
+        }
+        h3{
+            color:blue;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            text-align: left;
+            padding: 2em;
+            position: relative;
+            height: 100px;
+        }
+        #head{
+           background-color: #87CEEB !important ;
+        }
+        a{
+            font-weight : bold !important ;
+            font-size: 130% !important ;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #bdbdbd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            color:black;
+            background-color:white;
+        
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+
+
+
+        .project {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #87CEEB;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+        }
+
+
+        .container {
+            width: 100%;
+            position: absolute;
+        }
+
+        .img {
+            width: 100%;
+            float: left;
+            margin-right: 50px;
+            padding-top: 0%;
+            margin-top: 0%;
+        }
+
+        .name {
+            width: 80%;
+        }
+
+        .view-btn {
+            padding: 7px;
+            background-color: lightgreen;
+            border: none;
+            width: 90px;
+            border-radius: 10px;
+            float: right;
+        }
+
+        .view-btn:hover {
+            background-color: rgb(62, 181, 62);
+            color: white;
+        }
+
+        .li-item {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .img-con {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .img-item {
+            width: 50px;
+            height: 50px;
+        }
+
+        .img-size {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .more-btn {
+            padding: 7px;
+            background-color: rgb(255, 73, 73);
+            border: none;
+            width: 120px;
+            border-radius: 10px;
+            margin-left: 40%;
+            margin-top: 20px;
+
+        }
+
+        .more-btn:hover {
+            color: white;
+            background-color: rgb(244, 32, 32);
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #3a7d8a !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-btn {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            z-index: 99;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-btn:hover {
+            background-color: black;
+        }
+
+        .intern-btn {
+            padding: 7px;
+            background-color: lightgreen;
+            border: none;
+            width: 90px;
+            border-radius: 10px;
+            float: right;
+
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .nav-link:hover {
+            color: black !important;
+            border-bottom: 1px solid red;
+
+        }
+        .scroll-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+        }
+        .con{
+              text-decoration: none;
+        }
+    </style>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+            AOS.init();
+
+            document.querySelector('.scroll-btn').addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+         function fun() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <!-- <header> -->
+        <nav class="navbar navbar-expand-sm  navbar-dark" id="head">
+            <div class="container-fluid" data-aos="fade-right">
+                <div>
+                    <img src="profile.jpg" class="rounded-circle" alt="" srcset="" width="100px" height="100px">
+                </div>
+                <div>
+                    
+
+                </div>
+                <!-- <h3 style="margin-left: 30px; color:white" >Dineshkumar</h3> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar" data-aos="fade-right">
+                    <ul class="navbar-nav me-auto">
+                        <!-- <h3 style="margin-left: 30px; color:white">Dineshkumar</h3> -->
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="#about">About</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link text-white" href="">work</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#projects">projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#certification">certifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#intern">internship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#academics">Academics</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-white" href="#course">Course</a>
+                        </li>
+
+                    </ul>
+                    <div>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- </header> -->
+
+        <section id="about">
+            <h3>About Me</h3>
+            <div data-aos="fade-right">
+            <p>
+                Hi, I'm Dineshkumar, a passionate front-end web developer with a focus on creating modern and
+                user-friendly
+                websites.
+                I have experience in HTML, CSS, JavaScript, Bootstrap, React, python, Django, mysql and various
+                front-end
+                frameworks.
+                I am a enthusiastic person and I can adapt to any working condition. I am a honest person and I will
+                try to give my 100 % in what I do
+            </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div data-aos="fade-right">
+                <h3>skills</h3>
+                <p class="lang"><span style="font-weight: bold;">Programming Languages :</span> C,C++,HTML, CSS,
+                    JavaScript,Python,Django,React js, JSON</p>
+                <p class="lang"> <span style="font-weight: bold;"> Database :</span> MySQL,SQL</p>
+                <p class="lang"><span style="font-weight: bold;"> JavaScript Frameworks : </span>jQuery</p>
+                <p class="lang"> <span style="font-weight: bold;"> CSS Frameworks : </span>Bootstrap,w3css</p>
+                <p class="lang"> <span style="font-weight: bold;"> Software known : </span>Visual studio
+                    code,python IDLE,MYSQL workbench,Adobe Dreamweaver, Adobe photoshop</p>
+                <p class="lang"> <span style="font-weight: bold;">Operation Systems : </span>Windows/8/9/10</p>
+            </div>
+
+        </section>
+        <section data-aos="fade-right">
+            <h3>Webiner</h3>
+            <ul>
+                <li style="margin: 0%;">Emerging Trends in IOT and Wireless communication ( feb 2021)</li>
+                <li>Machine Learning - overview and it's Applications ( Dec 2021)</li>
+            </ul>
+
+        </section>
+        <section>
+            <div id="certification" data-aos="fade-right">
+                <h3>Certification</h3>
+                <ul>
+                    <li class="li-item">12-jan-2022 - "Introduction in IoT" in CISCO <a href="cisco_certification.jpg"
+                            target="_self"><input type="button" value="view" class="view-btn"></a>
+                    </li>
+                    <li class="li-item">7 March 2022-"Google Analytics for beginners" in Google <a
+                            href="google_analytics.jpg" target="_self"><input type="button" value="view"
+                                class="view-btn"></a></li>
+                    <li class="li-item">9 April 2022-"Introduction to Digital Marketing" in Simplilearn<a
+                            href="digital_marketing.jpg" target="_self"><input type="button" value="view"
+                                class="view-btn"></a>
+                    </li>
+                    <li class="li-item">1 April - 28 jul 2023 - “ Full stack Foundation - Core Java” in L&T EduTech.
+                        <a href="L&T_certification.jpg" target="_self"><input type="button" value="view"
+                                class="view-btn"></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </section>
+         <section>
+             <div data-aos="fade-right" id="course">
+            <h3>Python Full-Stack Developer Certification from Trishanna Technologies</h3>
+            <h4>Course Overview</h4>
+             <ul>
+               <li>Completed a comprehensive Python Full-Stack Development course at Trishanna Technologies, Bangalore.</li>
+                <li>Duration: October 26, 2023 - February 26, 2024.</li> 
+             </ul>
+             <h4>Skills Acquired</h4>
+             <h6>Front-End Development</h6>
+             <ul>
+                 <li>HTML, CSS, JavaScript, Bootstrap, React JS.</li>
+             </ul>
+             <h6>Back-End Development</h6>
+             <ul>
+                 <li>Python, Django.</li>
+             </ul>
+             <h6>Database Management</h6>
+             <ul>
+                 <li>MySQL, JSON.</li>
+             </ul>
+             <h4>Projects and Hands-On Experience</h4>
+             <ul>
+                 <li>Successfully completed several hands-on projects.</li>
+                 <li>Gained practical experience in</li>
+                 <li>Building web applications with dynamic and responsive interfaces.</li>
+                 <li>Integrating front-end and back-end components for seamless user experiences.
+</li>
+                 <li>Managing and querying databases efficiently</li>
+             </ul>
+             <h4>Notable Achievements</h4>
+             <ul>
+                 <li>Developed a fully functional web application as part of the final project.</li>
+                 <li>Demonstrated the ability to work with both front-end and back-end technologies effectively.</li>
+                 <li>Gained a strong understanding of full-stack development principles.</li>
+             </ul>
+             <h4>Certifications</h4>
+             <ul>
+                 <li>Awarded a Certificate of Completion for the Python Full-Stack Development course by Trishanna Technologies. <a href="python_certificate.jpeg" target="_self"><input type="button" value="view"
+                                class="view-btn"></a></li>
+             </ul>
+             </div>
+             
+        </section>
+
+        <section id="projects">
+            <h3>Projects</h3>
+            <div class="projects" data-aos="fade-right">
+                <div class="project">
+                    <h4>Title :“Industrial Booking portal for students”</h4>
+                    <h5>ABSTRACT</h5>
+                    <p data-aos="fade-right">In this web application fully provide Industrial Visit Information and offering Confirmation
+                        details. So this Website Company and student have to register this application. The role of
+                        company is to add Industrial Visit providing company details and also add Industrial Visit
+                        details
+                        like paid intern or non-paid intern. After that new student can register into this
+                        application
+                        and
+                        login by using the secure username and password. After successful login student can view
+                        company information and Industrial Visit details for using this web application. Student
+                        view
+                        Industrial Visit details and apply the Industrial Visit. The company authority can login and
+                        adds
+                        approval of the student’s Industrial Visit and duration of the visiting period and
+                        certificate
+                        details
+                        and all other details.</p>
+                    <h5>EXISTING SYSTEM </h5>
+                    <p data-aos="fade-right">
+
+                        In the existing system student can directly visit to the company and request about the
+                        Industrial Visit purpose. It’s difficult to reach the each company visiting process and
+                        requesting
+                        process done manual by the student. The existing system is manual, doesn’t have the
+                        flexibility
+                        to
+                        maintain and send the Industrial Visit request and acceptance details. There are many
+                        possibilities
+                        for the mistake to take place when the searching or finalizing companies are made manually.
+                        The
+                        existing system is tedious and time consuming. It also requires handling knowledge and
+                        skilled
+                        manpower. The maintenance cost with this system is periodical and unavoidable.
+                    </p>
+                    <h6>DISADVANTAGES</h6>
+                    <ul>
+                        <li>Manual work</li>
+                        <li>Storing and retrieving not easy</li>
+                        <li> No automatic messaging option available</li>
+                    </ul>
+                    <h5>PROPOSED SYSTEM</h5>
+                    <p data-aos="fade-right">
+                        This proposed Web application system is designed in the favor of the college student,
+                        which helps them to get easy Industrial Visit approval intimation such as company name and
+                        Industrial Visit schedule information to their students through this web application .It
+                        proposes an
+                        effective way to communicate intimation to the students. Our proposed System Totally design
+                        to
+                        reduce the communication gap between companies and college students. Our proposed scheme is
+                        user friendly system can use efficient way .completely avoid manual process in our work. The
+                        proposed system has been designed to eliminate the major disadvantages of the existing
+                        system.</p>
+                    <h6>ADVANTAGES</h6>
+                    <ul>
+                        <li> Systematic work</li>
+                        <li> Easy storing and retrieving </li>
+                        <li> No redundancy</li>
+
+                    </ul>
+                    <div class="container-fluid" data-aos="fade-right">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="screen1.png" alt="" srcset="" class="img-size">
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="login.png" alt="" srcset="" class="img-size">
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="data.png" alt="" srcset="" class="img-size">
+                            </div>
+                            <p style="margin-top: 10px;">click following button to know more about project</p>
+
+                            <a href="Web_Portal_Industrial_Vsiit___full_Document-PHP[1].docx"><input type="button"
+                                    value="more" class="more-btn"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                
+
+
+            </div>
+        </section>
+        <section>
+            <div id="intern" data-aos="fade-right">
+                <h3>Internship's</h3>
+                <h4>Completed internship in AVA Software pvt .Ltd as a " Software trainee - intern "</h4>
+                <h5>Position and Duration:</h5>
+                <ul>
+                    <li> Completed an internship at AVASOFT from January 2023 to March 2023.</li>
+                    <li> internship ID: 202J0135.</li>
+                </ul>
+                <h5>Role and Responsibilities:</h5>
+                <ul>
+                    <li> Engaged in front end development.</li>
+                    <li> Contributed to developing a websiite using frontend tools .</li>
+                </ul>
+                <h5>Skills Acquired:</h5>
+                <ul>
+                    <li> Developed practical skills in HTML5 ,CSS3 ,bootstrap ,JavaScript ,React and project management,
+                        etc.
+                    </li>
+                    <li> Gained hands-on experience with website development.</li>
+                </ul>
+                <h5>Professional Development:</h5>
+                <ul>
+                    <li> Applied theoretical knowledge gained during academic studies to real-world scenarios.</li>
+                    <li>Demonstrated the ability to adapt and learn quickly in a professional environment.</li>
+                </ul>
+                <h5>Learning Experience:</h5>
+                <ul>
+                    <li> Gained insights into the front end development through practical application.</li>
+                    <li> Participated in training sessions or workshops to enhance skills and knowledge.
+                        <a href="avasoft_internship.jpg" target="_self"><input type="button" value="view"
+                                class="intern-btn"></a>
+                    </li>
+                </ul>
+            </div>
+            <hr style="border: 1px solid black;">
+            <div data-aos="fade-right">
+                <h4>Completed internship in Narayana Hrudayalaya Limited as a "Digital Marketing - intern"</h4>
+                <h5>Position and Duration:</h5>
+                <ul>
+                    <li> Served as a Digital Marketing Intern at Narayana Hrudayalaya Limited.</li>
+                    <li> Internship duration: July 10th, 2023, to September 18th, 2023.</li>
+                </ul>
+                <h5>Responsibilities:</h5>
+                <ul>
+                    <li> Executed digital marketing strategies to enhance the online presence of the organization.</li>
+                    <li>Contributed to content creation for various digital platforms.</li>
+                </ul>
+                <h5>Skills Developed:</h5>
+                <ul>
+                    <li> Acquired hands-on experience in digital marketing tools and platforms.</li>
+                    <li>Gained insights into data analytics for assessing campaign performance.</li>
+                </ul>
+                <h5>Learning Experience:</h5>
+                <ul>
+                    <li> Gained valuable insights into the healthcare industry and its unique challenges in digital
+                        marketing.</li>
+                    <li>Applied theoretical knowledge to real-world scenarios, enhancing practical skills.<a
+                            href="internship_certification.jpg" target="_self"><input type="button" value="view"
+                                class="intern-btn"></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="academics" data-aos="fade-right">
+            <h3>Academics</h3>
+            <h5>Bachelor of Information Technology ( june-2020 – 2023 )</h5>
+            <ul>
+                <li>Kpr college of arts,science and Research,Coimbatore.</li>
+                <li> UG CGPA – 7.9</li>
+            </ul>
+            <h5>Higher Secondary Education( 2018 – 2020 )</h5>
+            <ul>
+                <li>Vidhya vikashni Matric Hr Sec School,Tirupur</li>
+                <li> 79%</li>
+            </ul>
+            <h5>Secondary School Leaving Certificate( 2017 - 2018 )</h5>
+            <ul>
+                <li>Oxford modern Matric School,Tirupur</li>
+                <li> 84%</li>
+            </ul>
+
+        </section>
+
+
+
+        <section id="contact" data-aos="fade-right">
+            <h3>Contact</h3>
+            <p> <img src="mail.png" alt="" srcset=""> You can reach me at <a class="con" href="mailto:dineshkumarsep142002@gmail.com">dineshkumarsep142002@gmail.com</a></p>
+            <p><img src="icons8-phone-24.png" alt="" srcset="">  <a class="con" href="tel:+919600268192">+91 9600268192</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Dineshkumar. All rights reserved.</p>
+
+        </footer>
+        <button class="scroll-btn">Top</button>
+    </div>
+    <script>
+     AOS.init();
+    </script>
+
+</body>
+
+</html>
